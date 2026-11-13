@@ -373,9 +373,13 @@ export default function HomePage() {
                     <span className="text-xs uppercase tracking-widest font-semibold px-3 py-1 rounded-full bg-[#4C9F38]/15 text-[#4C9F38]">
                       SDG 03
                     </span>
-                    <span className="font-serif italic text-4xl font-bold text-[#4C9F38]">
-                      3
-                    </span>
+                    <div className="w-12 h-12 rounded-xl overflow-hidden shrink-0 shadow-sm border border-black/10 bg-white">
+                      <img
+                        src="/sdg-3.png"
+                        alt="SDG 3"
+                        className="w-full h-full object-cover transition-transform group-hover:scale-105"
+                      />
+                    </div>
                   </div>
                   <h3 className="text-2xl font-serif font-bold text-[var(--sim-text-primary)] mb-2 group-hover:text-[#4C9F38] transition-colors">
                     Kehidupan Sehat &amp; Sejahtera
@@ -399,9 +403,13 @@ export default function HomePage() {
                     <span className="text-xs uppercase tracking-widest font-semibold px-3 py-1 rounded-full bg-[#BF8B2E]/15 text-[#BF8B2E]">
                       SDG 12
                     </span>
-                    <span className="font-serif italic text-4xl font-bold text-[#BF8B2E]">
-                      12
-                    </span>
+                    <div className="w-12 h-12 rounded-xl overflow-hidden shrink-0 shadow-sm border border-black/10 bg-white">
+                      <img
+                        src="/sdg-12.png"
+                        alt="SDG 12"
+                        className="w-full h-full object-cover transition-transform group-hover:scale-105"
+                      />
+                    </div>
                   </div>
                   <h3 className="text-2xl font-serif font-bold text-[var(--sim-text-primary)] mb-2 group-hover:text-[#BF8B2E] transition-colors">
                     Konsumsi &amp; Produksi yang Bertanggung Jawab

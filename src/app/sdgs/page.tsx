@@ -72,11 +72,12 @@ function SDGsPageContent() {
                       borderColor: isActive ? s.color : undefined,
                     }}
                   >
-                    <div
-                      className="w-20 h-20 rounded-2xl flex items-center justify-center font-serif text-4xl font-bold text-white shrink-0 shadow-sm"
-                      style={{ background: s.color }}
-                    >
-                      {s.number}
+                    <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl overflow-hidden shrink-0 shadow-md border border-black/10 bg-white">
+                      <img
+                        src={`/sdg-${s.number}.png`}
+                        alt={`SDG ${s.number}: ${s.name}`}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <div>
                       <span
@@ -110,15 +111,26 @@ function SDGsPageContent() {
                     background: `linear-gradient(135deg, ${selectedSDG.color} 0%, #173D32 100%)`,
                   }}
                 >
-                  <p className="text-xs uppercase tracking-widest font-semibold text-white/80 mb-2">
-                    Tujuan Global PBB
-                  </p>
-                  <h2 className="text-3xl md:text-5xl font-serif font-bold mb-4">
-                    SDG {selectedSDG.number}: {selectedSDG.name}
-                  </h2>
-                  <p className="font-serif italic text-lg md:text-xl text-white/95 max-w-3xl mb-6">
-                    “{selectedSDG.official}”
-                  </p>
+                  <div className="flex flex-col md:flex-row items-center md:items-start gap-6 mb-6">
+                    <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden shrink-0 shadow-xl border-2 border-white/30 bg-white">
+                      <img
+                        src={`/sdg-${selectedSDG.number}.png`}
+                        alt={`SDG ${selectedSDG.number}: ${selectedSDG.name}`}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div>
+                      <p className="text-xs uppercase tracking-widest font-semibold text-white/80 mb-2">
+                        Tujuan Global PBB
+                      </p>
+                      <h2 className="text-3xl md:text-5xl font-serif font-bold mb-3">
+                        SDG {selectedSDG.number}: {selectedSDG.name}
+                      </h2>
+                      <p className="font-serif italic text-base sm:text-lg md:text-xl text-white/95 max-w-3xl">
+                        “{selectedSDG.official}”
+                      </p>
+                    </div>
+                  </div>
                   <div className="p-4 rounded-2xl bg-black/20 backdrop-blur-md max-w-2xl border border-white/15">
                     <p className="text-sm md:text-base leading-relaxed text-white/90">
                       <strong>Korelasi SIM:</strong> {selectedSDG.connection}

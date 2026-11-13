@@ -131,18 +131,19 @@ export default function EventDetailPage() {
                     {eventSDGs.map((s) => (
                       <Link
                         key={s.id}
-                        className="p-4 rounded-2xl border transition-all flex items-center gap-4 hover:shadow-sm"
+                        className="p-4 rounded-2xl border transition-all flex items-center gap-4 hover:shadow-sm group"
                         style={{ borderColor: s.color }}
                         href={`/sdgs?n=${s.number}`}
                       >
-                        <div
-                          className="w-12 h-12 rounded-xl text-white font-bold font-serif text-xl flex items-center justify-center shrink-0"
-                          style={{ backgroundColor: s.color }}
-                        >
-                          {s.number}
+                        <div className="w-14 h-14 rounded-xl overflow-hidden shrink-0 shadow-sm border border-black/10 bg-white">
+                          <img
+                            src={`/sdg-${s.number}.png`}
+                            alt={`SDG ${s.number}: ${s.name}`}
+                            className="w-full h-full object-cover transition-transform group-hover:scale-105"
+                          />
                         </div>
                         <div>
-                          <b className="block text-sm font-semibold text-[var(--sim-text-primary)]">
+                          <b className="block text-sm font-semibold text-[var(--sim-text-primary)] group-hover:text-[var(--sim-forest-accent)] transition-colors">
                             SDG {s.number}
                           </b>
                           <span className="text-xs text-[var(--sim-text-muted)]">
